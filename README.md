@@ -1,4 +1,4 @@
-## web
+## react-webpack兼容ie8
 ### 目录结构
 	root
 	├── README.md       //说明文档
