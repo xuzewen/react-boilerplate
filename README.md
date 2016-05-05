@@ -39,4 +39,5 @@
 	npm run dist		
 		
 ### 代码热替换
+http://s.yuantutech.com/i4/55832b977c286e17320b9dc514410a32-1153-600.gif
 <img style="width: 500px" src="http://s.yuantutech.com/i4/55832b977c286e17320b9dc514410a32-1153-600.gif" />
