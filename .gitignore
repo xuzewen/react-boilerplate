@@ -1,0 +1,10 @@
+dev/
+node_modules/
+typings/
+npm-debug.json
+npm-debug.log
+.vscode/
+.idea/
+.*/
+gulpfile.js
+essi.json
