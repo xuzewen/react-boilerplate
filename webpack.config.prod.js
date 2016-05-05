@@ -21,7 +21,7 @@ var config = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: '[name].bundle.min.js',
-        publicPath: 'http://uat.yuantutech.com/yuantu/web/'
+        publicPath: ''
     },
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
