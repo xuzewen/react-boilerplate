@@ -46,12 +46,11 @@
     "webpack-dev-middleware": "1.4.0",
     "webpack-hot-middleware": "2.6.0",
     "react-router":"2.1.1",
+    "md5": "^2.1.0",
     "history": "^2.0.1"
   },
   "dependencies": {
-    "md5": "^2.1.0",
     "react": "0.14.6",
-    "react-dom": "0.14.6",
-    "history": "^2.0.1"
+    "react-dom": "0.14.6"
   }
 }
