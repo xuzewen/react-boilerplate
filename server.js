@@ -16,6 +16,7 @@ var compiler = webpack(config);
 const ROOT_PATH = "./src/";
 
 app.get("*", function(req, res, next){
+    
      if( req.path == "/" ){
         fs.readFile(path.join(ROOT_PATH, "/view/index.html"), 'utf-8', function (err, data) {
             if (err) {
