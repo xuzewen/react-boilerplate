@@ -7,7 +7,8 @@
     "dist": "npm run clean && cross-env NODE_ENV=production webpack -p --config webpack.config.prod.js",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --config webpack.config.build.js && node server.js build",
     "start": "node server.js dev",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "debug": "DEBUG=true node server.js dev"
   },
   "author": "xu",
   "license": "ISC",
@@ -36,18 +37,24 @@
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.8.5",
     "glob": "7.0.0",
+    "history": "^2.0.1",
     "html-webpack-plugin": "2.9.0",
     "less": "2.6.0",
     "less-loader": "2.2.2",
+    "md5": "^2.1.0",
+    "react-redux": "^4.4.5",
+    "react-router": "2.1.1",
+    "redux": "^3.5.2",
+    "redux-devtools": "^3.3.1",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.0.11",
+    "redux-thunk": "^2.1.0",
     "rimraf": "2.4.3",
     "style-loader": "0.13.0",
     "url-loader": "0.5.7",
     "webpack": "1.12.9",
     "webpack-dev-middleware": "1.4.0",
-    "webpack-hot-middleware": "2.6.0",
-    "react-router":"2.1.1",
-    "md5": "^2.1.0",
-    "history": "^2.0.1"
+    "webpack-hot-middleware": "2.6.0"
   },
   "dependencies": {
     "react": "0.14.6",

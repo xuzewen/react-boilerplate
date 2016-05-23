@@ -1,20 +1,29 @@
 import './css/css.less';
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import { App } from './components/App';
-import { List } from './components/list';
+import React, { Component } from 'react'
+import { render } from 'react-dom'
+import { App } from './containers/App'
+import {Provider} from 'react-redux'
+import configureStore from './store/configureStore'
 
-class Meun extends Component {
-    render () {
+const store = configureStore()
+
+function renderDevTools(store) {
+    if (__DEBUG__) {
+        let {DevTools, DebugPanel, LogMonitor} = require('redux-devtools')
+
         return (
-            <div>
-                <h1 className="middle">这是index页面</h1>
-                <h2 className="blue">这是入口index加载的list</h2>
-                <List />
-            </div> 
-        );
+            <DebugPanel top right bottom>
+            <DevTools store={store} monitor={LogMonitor} />
+            </DebugPanel>
+        )
     }
+
+    return null
 }
 
-render(<App />, document.getElementById('root'));
-render(<Meun />, document.getElementById('list'));
+render(<div>
+        <Provider store={store}>
+            <App />
+        </Provider>
+        {renderDevTools(store)}
+    </div>, document.getElementById('root'))

@@ -19,9 +19,16 @@ export class Counter extends Component {
 
   render() {
     return (
-      <h2 style={{ color: this.props.color }}>
-        计数 (累加{this.props.increment}): {this.state.counter}
-      </h2>
+      <div>
+        <h2>
+          计数 (累加{this.props.increment}): {this.state.counter}
+        </h2>
+        数量：<input type="text"/>
+        <br />
+        频率：<input type="text"/>（毫秒）
+        <br />
+        <input type="button" value="确定"/>
+      </div>
     );
   }
 }
