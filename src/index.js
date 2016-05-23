@@ -4,26 +4,23 @@ import { render } from 'react-dom'
 import { App } from './containers/App'
 import {Provider} from 'react-redux'
 import configureStore from './store/configureStore'
+import DevTools from './containers/DevTools'
 
 const store = configureStore()
 
-function renderDevTools(store) {
+function renderDevTools() {
     if (__DEBUG__) {
-        let {DevTools, DebugPanel, LogMonitor} = require('redux-devtools')
-
         return (
-            <DebugPanel top right bottom>
-            <DevTools store={store} monitor={LogMonitor} />
-            </DebugPanel>
+            <DevTools />
         )
     }
 
     return null
 }
 
-render(<div>
-        <Provider store={store}>
-            <App />
-        </Provider>
-        {renderDevTools(store)}
-    </div>, document.getElementById('root'))
+render(<Provider store={store}>
+            <div>
+                <App />
+                {renderDevTools()}
+            </div>
+        </Provider>, document.getElementById('root'))

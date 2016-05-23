@@ -8,10 +8,21 @@ export function setStep(step){
     }
 }
 
-
-export function setFre(frequency){
+export function setInit(init){
     return {
-        type: types.COUNT_FREQUENCY,
-        frequency
+        type: types.COUNT_PLUS,
+        init
+    }
+}
+
+export function stop(){
+    return {
+        type: types.COUNT_STOP
+    }
+}
+
+export function start(){
+    return {
+        type: types.COUNT_START
     }
 }
