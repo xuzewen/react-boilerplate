@@ -6,10 +6,6 @@ import { bindActionCreators } from 'redux'
 export class Counter extends Component {
   constructor(props) {
     super(props);
-    
-  }
-  
-  componentDidMount(){
     this.interval = setInterval(() => this.tick(), this.props.frequency);
   }
   
@@ -40,9 +36,9 @@ export class Counter extends Component {
   }
 
   render() {
-    const actions = this.props.actions
     return (
-      <div>
+      <div className="counter">
+        <h1 className="red">计数器</h1>
         <h2>
           计数 (累加{this.props.step}): {this.props.init}
         </h2>
@@ -55,7 +51,7 @@ export class Counter extends Component {
   }
 }
 
-
+//绑actions的第一种方法，在智能组件中绑定actions，并且只绑定要用到的actions
 export default connect(state => ({
   init: state.counter.init,
   step: state.counter.step,

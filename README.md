@@ -1,4 +1,5 @@
-## react-webpack兼容ie8
+## react-webpack-redux
+	在原有项目中引入redux
 ### 目录结构
 	root
 	├── README.md       //说明文档
@@ -10,6 +11,9 @@
 	├── src             //开发目录
 	│   ├── a.js        //入口a
 	│   ├── b.js        //入口b
+	│   ├── actions  	//actions
+	│   ├── reducer     //reducer
+	│   ├── store       //状态树
 	│   ├── components  //模块目录
 	│   ├── less        //样式目录
 	│   ├── demo        //demo目录
@@ -27,7 +31,11 @@
 +	本地开发测试
 
 		npm start
-        
+		
++	redux debug
+
+		npm run debug
+                
 +   兼容ie8测试
 
 	    npm run build
@@ -37,7 +45,5 @@
 ### 生产文件生成
 
 	npm run dist		
-		
-### 代码热替换
-http://s.yuantutech.com/i4/55832b977c286e17320b9dc514410a32-1153-600.gif
-<img style="width: 500px" src="http://s.yuantutech.com/i4/55832b977c286e17320b9dc514410a32-1153-600.gif" />
+
+

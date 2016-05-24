@@ -38,7 +38,8 @@ var config = {
         new webpack.DefinePlugin({
             "process.env": {
                 NODE_ENV: JSON.stringify("production")
-            }
+            },
+            __DEBUG__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false'))
         }),
         new ExtractTextPlugin('[name].css')
     ],

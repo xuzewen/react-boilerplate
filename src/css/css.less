@@ -1,3 +1,22 @@
+/*css_reast*/
+
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
+legend{color:#000}
+a{text-decoration:none;}
+#yui3-css-stamp.cssreset{display:none}
+
+
 .red{
     color:red;
 }
@@ -10,4 +29,72 @@
 .middle{
     width:300px;
     margin: 0 auto;
+}
+
+
+.counter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        line-height: 24px;
+    }
+    input[type=button]{
+        margin-top: 10px;
+    }
+}
+
+.todo-list{
+    position: absolute;
+    top: 0;
+    left: 600px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        line-height: 24px;
+    }
+    li{
+        height:24px;
+        line-height: 24px;
+    }
+}
+
+.fetch{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+    .type-list{
+        span{
+            display: inline-block;
+            width: 40px;
+            line-height: 28px;
+            text-align: center;
+        }
+        .active{
+            background: #ccc;
+        }
+    }
+    ul{
+        li{
+            img{
+                max-width: 50px;
+            }
+            a{
+                vertical-align: top;
+            }
+        }
+    }
 }

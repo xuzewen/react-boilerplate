@@ -39,6 +39,7 @@
     "glob": "7.0.0",
     "history": "^2.0.1",
     "html-webpack-plugin": "2.9.0",
+    "isomorphic-fetch": "^2.2.1",
     "less": "2.6.0",
     "less-loader": "2.2.2",
     "md5": "^2.1.0",
