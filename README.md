@@ -1,4 +1,5 @@
 ## react-webpack兼容ie8
+支持多入口文件，如果要写单页应用，注释掉webpack.config中的CommonsChunkPlugin
 ### 目录结构
 	root
 	├── README.md       //说明文档
