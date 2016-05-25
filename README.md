@@ -1,5 +1,9 @@
 ## react-webpack-redux
 	在原有项目中引入redux
+	三个基本demo
+		1.计数器
+		2.todo
+		3.fetch请求
 ### 目录结构
 	root
 	├── README.md       //说明文档
