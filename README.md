@@ -31,7 +31,8 @@
 	└── webpack.config.build.js  //webpack线上包测试配置文件
 
 ### 本地开发测试
-		
+暂不兼容ie8
+
 +	本地开发测试
 
 		npm start
@@ -39,10 +40,6 @@
 +	redux debug
 
 		npm run debug
-                
-+   兼容ie8测试
-
-	    npm run build
 		
 +	打开 http://localhost:3000
 		
