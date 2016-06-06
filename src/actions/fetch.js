@@ -1,16 +1,12 @@
 import * as types from './types'
 import fetch from 'isomorphic-fetch'
 
-export function getNews(type="social"){
+export function getNews(type='social'){
     let key = 'faf10506f4b71ba3113a8125f92d0e7f'
     let num = 10
     let url = `http://api.huceo.com/${type}/?key=${key}&num=${num}`
     return dispatch => {
-        fetch(url,{
-            'web-preferences': {
-                'web-security': false
-            }
-        }).then(checkStatus)
+        fetch(url).then(checkStatus)
           .then(parseJSON)
           .then(result => {
                 dispatch(success(result))
