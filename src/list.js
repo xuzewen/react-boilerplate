@@ -8,7 +8,7 @@ class Meun extends Component {
     render () {
         return (
             <div>
-                <h1 className="middle">这是index页面</h1>
+                <h1 className="middle">这是list页面</h1>
                 <h2 className="blue">这是入口index加载的list</h2>
                 <List />
             </div> 
