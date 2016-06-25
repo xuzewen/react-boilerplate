@@ -5,12 +5,22 @@ import Fetch from './fetch'
 
 
 
-export class App extends Component {
+export class Index extends Component {
   render() {
     return (
       <div>
         <Counter />
         <Todo />
+        <Fetch />
+      </div>
+    )
+  }
+}
+
+export class List extends Component {
+  render() {
+    return (
+      <div>
         <Fetch />
       </div>
     )

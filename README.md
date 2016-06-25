@@ -1,5 +1,9 @@
 ## react-webpack-redux
 	在原有项目中引入redux
+	并且使用了react-router
+	
+	配了两个路由/index和/list
+
 	三个基本demo
 		1.计数器
 		2.todo
