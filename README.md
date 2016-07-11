@@ -26,9 +26,7 @@
 	│       └── b.html  //b模板
 	├── server.js       //测试服务文件
 	├── package.json    //项目工程文件
-	├── webpack.config.dev.js   //webpack开发配置文件
-	├── webpack.config.prod.js  //webpack生产配置文件
-	└── webpack.config.build.js  //webpack线上包测试配置文件
+	└── webpack.config.js  //webpack配置文件
 
 ### 本地开发测试
 暂不兼容ie8
