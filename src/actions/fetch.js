@@ -39,6 +39,7 @@ function error(err){
 
 
 function checkStatus(response) {
+    console.log(response)
   if ((response.status >= 200 && response.status < 300) || response.status == 304) {
     return response
   } else {
