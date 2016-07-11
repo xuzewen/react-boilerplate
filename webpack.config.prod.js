@@ -4,7 +4,6 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-//var ESSIPlugin = require("essi-plugin");
 
 
 var entries = getEntry('src/*.js', 'src/');
