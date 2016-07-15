@@ -4,5 +4,11 @@
         ["transform-es5-property-mutators","transform-jscript"]
     ],
     "env": {
+        "development": {
+            "presets": ["react-hmre"]
+        },
+        "production": {
+            "presets": ["react-optimize"]
+        }
     }
 }

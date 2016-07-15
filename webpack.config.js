@@ -1,6 +1,7 @@
 var path = require('path')
 var glob = require('glob')
 var webpack = require('webpack')
+var HappyPack = require('happypack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -10,15 +11,15 @@ var distPath = './build'
 var environment = process.env.NODE_ENV || 'dev'
 
 var dev_environment = environment.indexOf('dev')
-var uat_environment = environment.indexOf('build')
+var daily_environment = environment.indexOf('build')
 var dist_environment = environment.indexOf('dist')
 
 
-var uat_publicPath = ''
+var daily_publicPath = ''
 var dist_publicPath = ''
 var dev_publicPath = ''
 
-var publicPath = uat_environment != -1 ? uat_publicPath : (dist_environment != -1 ? dist_publicPath : dev_publicPath)
+var publicPath = daily_environment != -1 ? daily_publicPath : (dist_environment != -1 ? dist_publicPath : dev_publicPath)
 
 
 
@@ -74,7 +75,11 @@ switch (environment) {
             },
             __DEBUG__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false'))
         }),
-        new ExtractTextPlugin('[name].css')
+        new ExtractTextPlugin('[name].css'),
+        new HappyPack({
+            id: 'js' ,
+            threads: 4
+        })
       ]
       config.module = {
           loaders: [
@@ -83,8 +88,11 @@ switch (environment) {
                   loader: 'babel',
                   exclude: /node_modules/,
                   query: {
-                      presets: ['es2015-loose', 'stage-0']
-                  }
+                      presets: ['es2015-loose', 'stage-0'],
+                      //缓存增加打包效率
+                      cacheDirectory: true
+                  },
+                  happy: {id:'js'}
               },
               {test: /\.less$/, loader: ExtractTextPlugin.extract('css!less')},
               {test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css')},
@@ -109,6 +117,7 @@ if(dist_environment != -1){
         })
     )
 }
+
 
 
 var pages = Object.keys(getEntry('src/view/**/*.html', 'src/view/'))

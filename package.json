@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "clean": "rimraf build",
-    "dist": "npm run clean && cross-env NODE_ENV=production webpack -p --config webpack.config.prod.js",
-    "build": "npm run clean && cross-env NODE_ENV=production webpack --config webpack.config.build.js && node server.js build",
+    "dist": "npm run clean && cross-env NODE_ENV=dist webpack -p",
+    "build": "npm run clean && cross-env NODE_ENV=build webpack && node server.js build",
     "start": "node server.js dev",
     "lint": "eslint src",
     "debug": "DEBUG=true node server.js dev"
@@ -23,6 +23,7 @@
     "babel-preset-es2015-loose": "^7.0.0",
     "babel-preset-react": "6.3.13",
     "babel-preset-react-hmre": "1.0.0",
+    "babel-preset-react-optimize": "^1.0.1",
     "babel-preset-stage-0": "^6.5.0",
     "consolidate": "0.14.0",
     "cross-env": "1.0.6",
@@ -37,6 +38,7 @@
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.8.5",
     "glob": "7.0.0",
+    "happypack": "^2.1.1",
     "history": "^2.0.1",
     "html-webpack-plugin": "2.9.0",
     "isomorphic-fetch": "^2.2.1",

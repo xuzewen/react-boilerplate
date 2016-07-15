@@ -5,6 +5,7 @@ export function getNews(type='social'){
     let key = 'faf10506f4b71ba3113a8125f92d0e7f'
     let num = 10
     let url = `http://api.huceo.com/${type}/?key=${key}&num=${num}`
+    //let url = 'http://fbi.yuantutech.com:3007/tms/test'
     return dispatch => {
         fetch(url).then(checkStatus)
           .then(parseJSON)
