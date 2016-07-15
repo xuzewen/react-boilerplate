@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "rimraf build",
     "dist": "npm run clean && cross-env NODE_ENV=dist webpack -p",
-    "build": "npm run clean && cross-env NODE_ENV=build webpack && node server.js build",
+    "build": "npm run clean && cross-env NODE_ENV=build webpack",
     "start": "node server.js dev",
     "lint": "eslint src",
     "debug": "DEBUG=true node server.js dev"
@@ -32,7 +32,6 @@
     "eslint-plugin-babel": "3.1.0",
     "eslint-plugin-react": "3.11.3",
     "eventsource-polyfill": "0.9.6",
-    "express": "4.13.3",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.8.5",
     "glob": "7.0.0",
