@@ -14,8 +14,6 @@ for (var key in config['entry']) {
 
 var compiler = webpack(config);
 
-var compiler = webpack(config);
-
 var server = new WebpackDevServer(compiler, {
     hot:true,
     //热加载必须的 inline
