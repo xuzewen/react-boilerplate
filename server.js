@@ -7,7 +7,7 @@ var hosts = '0.0.0.0'
 
 for (var key in config['entry']) {
     var arr = [];
-    arr.unshift('babel-polyfill', config['entry'][key]);
+    arr.unshift(`webpack-dev-server/client?http://${hosts}:${port}/`,'webpack/hot/dev-server','babel-polyfill', config['entry'][key]);
     config['entry'][key] = arr;
 }
 
