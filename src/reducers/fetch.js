@@ -1,5 +1,6 @@
 import * as types from '../actions/types'
 
+
 export default function counter(state={newslist:[],error:'',typeName:"social"}, action) {
     switch (action.type){
         case types.FETCH_SUCCESS:

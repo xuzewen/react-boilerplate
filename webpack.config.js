@@ -5,6 +5,7 @@ var HappyPack = require('happypack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var merge = require('lodash/object/merge')
 
 var distPath = './build'
 
@@ -31,7 +32,7 @@ var config = {
   entry: entries,
   output: {
     path: path.resolve(__dirname, distPath),
-    filename: '[name].bundle.js',
+    filename: '[name].bundle.js?[chunkhash]',
     publicPath: publicPath
   },
   plugins: [
@@ -64,10 +65,13 @@ switch (environment) {
     ]
     break;
   default:
+      config.entry = merge(config.entry, {
+          public: ['react', 'react-dom', 'redux', 'react-redux', 'redux-devtools-log-monitor', 'redux-devtools-dock-monitor', 'redux-devtools', 'isomorphic-fetch']
+      })
       config.plugins = [new CommonsChunkPlugin({
-            name: 'public',
-            chunks: chunks,
-            minChunks: chunks.length
+            names: ['public', 'manifest']
+            // chunks: chunks,
+            // minChunks: chunks.length
         }),
         new webpack.DefinePlugin({
             'process.env': {
@@ -142,6 +146,8 @@ pages.forEach(function (pathname) {
 
   config.plugins.push(new HtmlWebpackPlugin(conf))
 })
+
+console.log(config.entry)
 
 module.exports = config
 

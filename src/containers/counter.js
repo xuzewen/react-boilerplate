@@ -45,7 +45,7 @@ export class Counter extends Component {
         累加：<input type="text" defaultValue="1" ref="step"/>
         <br />
         <input type="button" value="确定" onClick={this.reset.bind(this)}/>
-        <input type="button" value={this.props.stop? "开始" : "停止"} onClick={this.props.stop ? this.start.bind(this) : this.stop.bind(this)}/>
+        <input type="button" value={this.props.stop? '开始' : '暂停'} onClick={this.props.stop ? this.start.bind(this) : this.stop.bind(this)}/>
       </div>
     );
   }
