@@ -21,19 +21,6 @@ function renderDevTools() {
     return null
 }
 
-
-//绑actions的第二种方法，将所有的actions绑到最顶层
-
-// function mapStateToTopProps(state) {
-//     return state;
-// }
-
-// function mapDispatchToTopProps(dispatch) {
-//     return createAction(dispatch);
-// }
-
-// var A = connect(mapStateToTopProps, mapDispatchToTopProps)(App);
-
 render(<Provider store={store}>
             <div>
                 <App />

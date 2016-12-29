@@ -18,7 +18,6 @@ var server = new WebpackDevServer(compiler, {
     hot:true,
     //热加载必须的 inline
     inline:true,
-
     quiet: false,
     compress: false,
     historyApiFallback: true,

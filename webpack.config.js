@@ -32,7 +32,7 @@ var config = {
   entry: entries,
   output: {
     path: path.resolve(__dirname, distPath),
-    filename: '[name].bundle.js?[chunkhash]',
+    filename: '[name].bundle.js?[hash]',
     publicPath: publicPath
   },
   plugins: [

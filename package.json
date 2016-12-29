@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "clean": "rimraf build",
-    "dist": "npm run clean && cross-env NODE_ENV=dist webpack -p",
-    "build": "npm run clean && cross-env NODE_ENV=build webpack",
+    "dist": "npm run clean && cross-env NODE_ENV=dist webpack -p --config webpack.config.prod",
+    "build": "npm run clean && cross-env NODE_ENV=build webpack --config webpack.config.build",
     "start": "node server.js dev",
     "lint": "eslint src",
     "debug": "DEBUG=true node server.js dev"
@@ -13,7 +13,7 @@
   "author": "xu",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "6.6.0",
+    "babel-core": "6.10.4",
     "babel-eslint": "5.0.0-beta9",
     "babel-loader": "6.2.4",
     "babel-plugin-transform-es5-property-mutators": "^6.6.5",

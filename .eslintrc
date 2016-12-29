@@ -9,7 +9,7 @@
   },
   "parser": "babel-eslint",
   "rules": {
-    "quotes": [2, "single"],
+    // "quotes": [2, "single"],
     "strict": [2, "never"],
     "babel/generator-star-spacing": 1,
     "babel/new-cap": 1,
