@@ -4,6 +4,7 @@ var baseConfig = require('./webpack.config.base');
 
 var distPath = baseConfig.distPath;
 var entries = baseConfig.entries;
+var pagePluginArr = baseConfig.pagePluginArr;
 
 var dev_publicPath = '';
 var chunks = Object.keys(entries);
@@ -38,5 +39,9 @@ var config = {
     ]
   }
 }
+
+pagePluginArr.forEach(function (item) {
+    config.plugins.push(item);
+})
 
 module.exports = config
