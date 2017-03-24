@@ -31,7 +31,8 @@ var config = {
   output: {
     path: path.resolve(__dirname, distPath),
     filename: '[name].bundle.js',
-    publicPath: publicPath
+    publicPath: publicPath,
+    chunkFilename: '[name].[chunkhash:5].chunk.js'
   },
   plugins: [
   ],

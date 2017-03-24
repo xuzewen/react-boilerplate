@@ -33,16 +33,29 @@ class Page extends Component{
     }
 
     render() {
-
+        console.log(this.props)
         return (
             <div>
+                <div>11111</div>
                 {
-                    this.props.children
+                    this.props.default
                 }
             </div>
         )
     }
 
+}
+
+const qq = (location, callback) => {
+  require.ensure([], require => {
+    callback(null, require('./containers/Index'))
+  }, 'qq')  
+}
+
+const ee = (location, callback) => {
+  require.ensure([], require => {
+    callback(null, require('./containers/List'))
+  }, 'ee')  
 }
 
 export default class App extends Component{
@@ -56,10 +69,10 @@ export default class App extends Component{
 			    <Route path="/" component={Page}>
                     <IndexRedirect to="index"/>
 			        <Route path="index">
-			            <IndexRoute component={Index}/>
+			            <IndexRoute getComponent={qq}/>
 			        </Route>
                     <Route path="list">
-			            <IndexRoute component={List}/>
+			            <IndexRoute getComponent={ee}/>
 			        </Route>
 			    </Route>
 			</Router>
