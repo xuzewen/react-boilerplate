@@ -49,13 +49,13 @@ class Page extends Component{
 const qq = (location, callback) => {
   require.ensure([], require => {
     callback(null, require('./containers/Index'))
-  }, 'qq')  
+  }, `qq`)
 }
 
-const ee = (location, callback) => {
+const list = (location, callback) => {
   require.ensure([], require => {
     callback(null, require('./containers/List'))
-  }, 'ee')  
+  }, 'list')  
 }
 
 export default class App extends Component{
@@ -72,7 +72,7 @@ export default class App extends Component{
 			            <IndexRoute getComponent={qq}/>
 			        </Route>
                     <Route path="list">
-			            <IndexRoute getComponent={ee}/>
+			            <IndexRoute getComponent={list}/>
 			        </Route>
 			    </Route>
 			</Router>
