@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var baseConfig = require('./webpack.config.base');
 
+
 var distPath = baseConfig.distPath;
 var entries = baseConfig.entries;
 var pagePluginArr = baseConfig.pagePluginArr;
